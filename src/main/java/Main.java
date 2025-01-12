@@ -12,7 +12,7 @@ public class Main {
         scan.nextLine();
         var animalList = new ArrayList<Animal>();
         processAnimal(scan, animalCount, animalList);
-        animalList.forEach(s -> System.out.println(s.toString() + "\n"));
+        animalList.forEach(s -> System.out.println(s.toString()));
     }
 
     private static void processAnimal(Scanner scan, int animalCount, ArrayList<Animal> animalList) {
@@ -27,6 +27,7 @@ public class Main {
         if (type.equals("dog") || type.equals("cat")) {
             var name = scan.nextLine();
             var age = readInt(scan);
+            scan.nextLine();
             if (age <= 0) {
                 System.out.println("Incorrect input. Age <= 0");
                 return null;
